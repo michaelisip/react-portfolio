@@ -9,9 +9,6 @@ const Shots = () => {
     useEffect(() => {
         fetchUserInformation()
         fetchShots()
-        if (userInfo && shots) {
-            setLoading(false)
-        }
     }, [])
 
     const fetchUserInformation = async () => {
@@ -28,6 +25,7 @@ const Shots = () => {
         const response = await fetch(`${ENDPOINT}=${ACCESS_TOKEN}`)
         const data = await response.json()
         setShots(data)
+        setLoading(false)
     } 
 
     return (
@@ -48,7 +46,7 @@ const Shots = () => {
                 {shots.map((shot, i) => (
                     <div className="col-lg-4 col-md-6 text-left my-2" key={i}>
                         <div className="card shot shadow-0 border-0 rounded-0">
-                            <img src={shot.images.normal} className="card-img" />
+                            <img src={shot.images.normal} className="card-img" alt={shot.name} />
                         </div>
                     </div>
                 ))}
