@@ -37,7 +37,7 @@ const Footer = ({ endpoint, data }) => (
                 </div>
                 <div className="col-lg-3 col-md-4 my-3">
                     <p className="footer-text footer-logo">MJ.</p>
-                    <p className="footer-text">Copyright @2019</p>
+                    <p className="footer-text">Copyright @2020</p>
                 </div>
             </div>
             <div className="row">
@@ -48,10 +48,9 @@ const Footer = ({ endpoint, data }) => (
 
             <div className="credits text-center">
                 <p className="footer-text">
-                    Built with <a href="https://reactjs.org" target="_blank" rel="noopener noreferrer"> React </a> licensed under <a href="https://github.com/facebook/react/blob/master/LICENSE" target="_blank" rel="noopener noreferrer">MIT</a>.
-                </p>
-                <p className="footer-text">
-                    And designed using <a href="https://getbootstrap.com" target="_blank" rel="noopener noreferrer"> Bootstrap 4 </a> under <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE" target="_blank" rel="noopener noreferrer"> MIT License</a>.
+                    Built with <a href="https://reactjs.org" target="_blank" rel="noopener noreferrer"> React </a> 
+                    &middot; <a href="https://expressjs.com" target="_blank" rel="noopener noreferrer"> Express </a>
+                    &middot; <a href="https://getbootstrap.com" target="_blank" rel="noopener noreferrer"> Bootstrap </a>
                 </p>
             </div>
         </div>
