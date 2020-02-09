@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactLoading from 'react-loading'
 
 import './App.css';
 import Navbar from './navbar/navbar.component'
@@ -29,7 +30,6 @@ class App extends Component {
     })
     const json = await response.json()
     this.setState({
-      loading: false,
       data: json.data
     })
   }
@@ -40,7 +40,7 @@ class App extends Component {
     const { loading, data, endpoint } = this.state
 
     if(loading) {
-      return <div> Loading.. </div>
+      return <ReactLoading className="loading" type="bubbles" color="#000"/>
     } else {
       return (
 
