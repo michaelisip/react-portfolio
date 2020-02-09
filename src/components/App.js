@@ -21,7 +21,12 @@ class App extends Component {
   }
 
   async componentDidMount() {
-    const response = await fetch(`${this.state.endpoint}/data`)
+    const response = await fetch(`${this.state.endpoint}/data`, {
+      headers : { 
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      }
+    })
     const json = await response.json()
     this.setState({
       loading: false,
