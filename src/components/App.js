@@ -18,20 +18,23 @@ class App extends Component {
       data: null,
       endpoint: `${process.env.REACT_APP_API_ENDPOINT}`
     }
+  }
+
+  async componentDidMount() {
+    const response = await fetch(`${this.state.endpoint}/data`, {
+      headers : { 
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      }
+    })
+    const json = await response.json()
+    this.setState({
+      loading: false,
+      data: json.data
+    })
+  }
+
   
-  }
-
-  componentDidMount() {
-    fetch(`${this.state.endpoint}/data`)
-      .then((response) => response.json())
-      .then((json) => {
-        this.setState({
-          loading: false,
-          data: json.data
-        })
-      })
-  }
-
   render() {
 
     const { loading, data, endpoint } = this.state
