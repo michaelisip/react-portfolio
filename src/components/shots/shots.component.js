@@ -46,7 +46,7 @@ const Shots = () => {
                 {shots.map((shot, i) => (
                     <div className="col-lg-4 col-md-6 text-left my-2" key={i}>
                         <div className="card shot shadow-0 border-0 rounded-0">
-                            <img src={shot.images.normal} className="card-img" alt={shot.name} />
+                            <img src={shot.images.normal} className="card-img" alt={shot.title} />
                         </div>
                     </div>
                 ))}
