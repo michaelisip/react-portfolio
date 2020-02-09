@@ -30,6 +30,7 @@ class App extends Component {
     })
     const json = await response.json()
     this.setState({
+      loading: false,
       data: json.data
     })
   }
