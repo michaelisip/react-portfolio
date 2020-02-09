@@ -10,9 +10,6 @@ const Repositories = () => {
     useEffect(() => {
         fetchUserInformation()
         fetchRepositories()
-        if (userInfo && repos) {
-            setLoading(false)
-        }
     }, [])
 
     const fetchUserInformation = async () => {
@@ -27,6 +24,7 @@ const Repositories = () => {
         const response = await fetch(ENDPOINT)
         const data = await response.json()
         setRepos(data)
+        setLoading(false)
     }
 
     return (

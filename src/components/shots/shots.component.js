@@ -9,9 +9,6 @@ const Shots = () => {
     useEffect(() => {
         fetchUserInformation()
         fetchShots()
-        if (userInfo && shots) {
-            setLoading(false)
-        }
     }, [])
 
     const fetchUserInformation = async () => {
@@ -28,6 +25,7 @@ const Shots = () => {
         const response = await fetch(`${ENDPOINT}=${ACCESS_TOKEN}`)
         const data = await response.json()
         setShots(data)
+        setLoading(false)
     } 
 
     return (
