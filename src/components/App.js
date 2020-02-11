@@ -45,7 +45,7 @@ class App extends Component {
     } else {
       return (
 
-        <div> 
+        <div className="mx-2"> 
 
           <Navbar />
           <Socials endpoint={endpoint} socials={data.socials}/>
@@ -62,7 +62,7 @@ class App extends Component {
 
             {/* Works */}
             <section className="portfolio my-5" id="portfolio">
-              <h1 className="section-header">Portfolio.</h1>
+              <h1 className="section-header">Projects.</h1>
               <div className="row">
                 <div className="col-6">
                   <hr className="mb-3" />

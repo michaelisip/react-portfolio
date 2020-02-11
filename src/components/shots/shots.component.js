@@ -30,13 +30,15 @@ const Shots = () => {
 
     return (
         <div className="portfolio-section my-5">
-            <h1 className="subsection-header"> 
-                Dribbble 
-            </h1>
-            <a href="https://dribbble.com/ehemjii" target="_blank" rel="noopener noreferrer" className="badge badge-primary px-3 py-1" style={{ backgroundColor: "#ea4c89" }}>
-                Follow
-            </a>
-            <p className="subsection-info mb-5 mt-1" id="dribbble-data">
+            <div className="d-flex align-items-center">
+                <h1 className="subsection-header mb-0"> 
+                    Dribbble 
+                </h1>
+                <a href="https://dribbble.com/ehemjii" target="_blank" rel="noopener noreferrer" className="badge badge-primary ml-2 px-3 py-1" style={{ backgroundColor: "#ea4c89" }}>
+                    Follow
+                </a>
+            </div>
+            <p className="subsection-info mb-5" id="dribbble-data">
                 {! loading && 
                     userInfo.followers_count + " Followers | " + userInfo.login
                 }

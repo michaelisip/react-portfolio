@@ -29,14 +29,16 @@ const Repositories = () => {
 
     return (
         <div className="portfolio-section my-5">
-            <h1 className="subsection-header"> 
-                Github 
-            </h1>
-            <a href="https://github.com/mj-isip23/" target="_blank" rel="noopener noreferrer" className="badge badge-primary px-3 py-1" style={{ backgroundColor: "#24292e" }}>
-                Follow
-            </a>
+            <div className="d-flex align-items-center">
+                <h1 className="subsection-header mb-0"> 
+                    Github 
+                </h1>
+                <a href="https://github.com/mj-isip23/" target="_blank" rel="noopener noreferrer" className="badge badge-primary ml-2 px-3 py-1" style={{ backgroundColor: "#24292e" }}>
+                    Follow
+                </a>
+            </div>
             {! loading && 
-                <p className="subsection-info mb-5 mt-1" id="github-data">
+                <p className="subsection-info mb-5" id="github-data">
                     {userInfo.followers + " Followers | " + userInfo.following + " Followings | " + userInfo.public_repos + " Repositories | " + userInfo.login}
                 </p>
             }
