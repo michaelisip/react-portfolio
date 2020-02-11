@@ -5,7 +5,7 @@ const Project= ({ index, project, endpoint }) => {
 
     return (
     <div className="d-flex flex-column flex-md-row align-items-center my-5">
-        <div className={((index % 2) === 0 ? 'order-md-1' : 'order-md-2') + " mb-3 mt-5"}>
+        <div className={((index % 2) === 0 ? 'order-md-1' : 'order-md-2') + " mb-3 mt-5"} style={{ maxWidth: '800px' }}>
             <h1 className="project-title"> { project.name } </h1>
             <p className="project-role"> { project.role } </p>
             <p className="project-description"> 
