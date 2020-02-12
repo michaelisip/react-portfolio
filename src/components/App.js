@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactLoading from 'react-loading'
+import ReactGA from 'react-ga'
 
 import './App.css';
 import Navbar from './navbar/navbar.component'
@@ -21,7 +22,14 @@ class App extends Component {
     }
   }
 
+  initializeReactGA() {
+      const GA_TRACKING_CODE = process.env.GA_TRACKING_CODE
+      ReactGA.initialize(GA_TRACKING_CODE);
+      ReactGA.pageview('/');
+  }
+
   async componentDidMount() {
+    this.initializeReactGA()
     const response = await fetch(`${this.state.endpoint}/data`, {
       headers : { 
         'Content-Type': 'application/json',
