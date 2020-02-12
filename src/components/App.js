@@ -24,8 +24,10 @@ class App extends Component {
 
   initializeReactGA() {
       const GA_TRACKING_CODE = process.env.GA_TRACKING_CODE
+      console.log(GA_TRACKING_CODE)
+      console.log(window.location.pathname)
       ReactGA.initialize(GA_TRACKING_CODE);
-      ReactGA.pageview('/home');
+      ReactGA.pageview(window.location.pathname);
   }
 
   async componentDidMount() {
