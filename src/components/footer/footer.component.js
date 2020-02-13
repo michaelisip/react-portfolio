@@ -54,7 +54,7 @@ const Footer = ({ endpoint, data }) => {
                     <div className="row text-center justify-content-center my-3">
                         <div className="col-lg-3 col-md-4 my-3">
                             <a className="footer-text d-block goToTopBtn" href="/">Home</a>
-                            <a className="footer-text d-block aboutBtn" href="https://ehemji.netlify.com" target="_blank" rel="noopener noreferrer">Blogs</a>
+                            <a className="footer-text d-block aboutBtn" href="https://blogs-michaeljohnisip.netlify.com" target="_blank" rel="noopener noreferrer">Blogs</a>
                             <a className="footer-text d-block portfolioBtn" href="/">Portfolio</a>
                             <a className="footer-text d-block" href="mailto:isipmichaeljohnisip">Contact</a>
                         </div>
