@@ -30,7 +30,7 @@ class App extends Component {
 
   async componentDidMount() {
     this.initializeReactGA()
-    const response = await fetch(`${this.state.endpoint}/data`, {
+    const response = await fetch(`${this.state.endpoint}/portfolio`, {
       headers : { 
         'Content-Type': 'application/json',
         'Accept': 'application/json'
