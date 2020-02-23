@@ -37,7 +37,9 @@ const Repository = ({ repo }) => {
             <div className="card repo border-0">
                 <div className="card-body">
                     <h6 className="card-title repo-title text-dark mb-2"> 
-                        { repo.name } 
+                        <a href={repo.url ? repo.url : null} target="blank" rel="noopener noreferrer" className="text-dark">
+                            { repo.name }
+                        </a>
                     </h6>
                     <p className="card-subtitle repo-subtitle mb-2 text-muted"> 
                         Updated last: { date.toDateString() } 
@@ -50,7 +52,7 @@ const Repository = ({ repo }) => {
                             <FontAwesomeIcon icon={faCodeBranch} />
                         </span>
                     }
-                    <span className="badge repo-language badge-secondary float-right ml-2" style={{backgroundColor: lang.value}}> 
+                    <span className="badge repo-language badge-secondary float-right px-3 py-1 ml-2" style={{backgroundColor: lang.value}}> 
                         {repo.language ? repo.language : 'Unknown' } 
                     </span>
                 </div>

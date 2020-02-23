@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import ReactLoading from 'react-loading'
 import ReactGA from 'react-ga'
 
-import './App.css';
 import Navbar from './navbar/navbar.component'
 import Socials from './socials/socials.component'
 import About from './about/about.component'

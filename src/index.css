@@ -42,6 +42,13 @@
   margin: 20px;
 }
 
+#socials {
+  position: fixed;
+  z-index: 99;
+  left: 20px;
+  bottom: 30px;
+}
+
 .sidebar-social {
   width: 30px;
 }
