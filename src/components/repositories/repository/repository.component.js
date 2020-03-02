@@ -52,7 +52,7 @@ const Repository = ({ repo }) => {
                             <FontAwesomeIcon icon={faCodeBranch} />
                         </span>
                     }
-                    <span className="badge repo-language badge-secondary float-right px-3 py-1 ml-2" style={{backgroundColor: lang.value}}> 
+                    <span className="badge repo-language badge-secondary float-right px-3 py-1 ml-2" style={{backgroundColor: lang ? lang.value : '#333'}}> 
                         {repo.language ? repo.language : 'Unknown' } 
                     </span>
                 </div>

@@ -45,13 +45,18 @@ const Shots = () => {
             </p>
 
             <div className="row justify-content-center text-center my-2" id="shots">
-                {shots.map((shot, i) => (
+              { shots.length ? (
+                  shots.map((shot, i) => (
                     <div className="col-lg-4 col-md-6 text-left my-2" key={i}>
-                        <div className="card shot shadow-0 border-0 rounded-0">
-                            <img src={shot.images.normal} className="card-img" alt={shot.title} />
-                        </div>
+                      <div className="card shot shadow-0 border-0 rounded-0">
+                        <img src={shot.images.normal} className="card-img" alt={shot.title} />
+                      </div>
                     </div>
-                ))}
+                  ))
+                ) : (
+                  <i> Problem encountered while fetching shots... </i>
+                )
+              }
             </div>
         </div>
     )

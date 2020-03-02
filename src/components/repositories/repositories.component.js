@@ -44,9 +44,14 @@ const Repositories = () => {
             }
 
             <div className="row justify-content-center my-2" id="repos">
-                { repos.map((repo, i) => (
+              { repos.length ? (
+                  repos.map((repo, i) => (
                     <Repository repo={repo} key={i} />
-                )) }
+                  )) 
+                ) : (
+                  <i> Problem encountered while fetching repositories... </i>
+                )
+              }
             </div>
         </div>
     )
